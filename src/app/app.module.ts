@@ -6,14 +6,12 @@ import { AppComponent } from './app.component';
 import { SiteHeaderComponent } from '@core/site-header/site-header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CatalogModule } from '@catalog/catalog.module';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SiteHeaderComponent,
-  ],
+  declarations: [AppComponent, SiteHeaderComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, CatalogModule],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

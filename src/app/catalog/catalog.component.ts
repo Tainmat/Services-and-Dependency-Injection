@@ -21,7 +21,6 @@ export class CatalogComponent implements OnInit {
     this.productService
       .getProducts()
       .subscribe((products) => (this.products = products));
-    setTimeout(() => this.productService.refreshProducts(), 200);
   }
 
   addToCart(product: Product) {
